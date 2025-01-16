@@ -142,8 +142,10 @@ class XmlSitemapUrlsImplementation extends AbstractFusionObject
             }
             $items[] = $item;
         }
-        foreach ($node->getChildNodes('Neos.Neos:Document') as $childDocumentNode) {
-            $this->appendItems($items, $childDocumentNode);
+        if (!$node->getNodeType()->isOfType('Neos.Seo:NoindexDescendantMixin')) {
+            foreach ($node->getChildNodes('Neos.Neos:Document') as $childDocumentNode) {
+                $this->appendItems($items, $childDocumentNode);
+            }
         }
     }
 
