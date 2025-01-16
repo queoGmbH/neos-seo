@@ -17,7 +17,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.0.x-dev"
+            "dev-master": "3.0.x-dev",
+            "dev-feature/noindexDescendantMixin": "3.x-dev"
         },
         "applied-flow-migrations": [
             "TYPO3.TYPO3CR-20150510103823",
