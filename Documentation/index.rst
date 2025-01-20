@@ -239,6 +239,9 @@ By default all shortcuts are ignored in the sitemap. They inherit from the proto
 If you have other document types that should not appear in the sitemap you can also let them inherit from
 that prototype.
 
+There is an extended prototype `Neos.Seo:NoindexDescendantMixin` used to not index for all child nodes (descendants)
+of a node that inherits from it.
+
 To include alternate language links of pages in the xml sitemap use the following fusion code::
 
     prototype(Neos.Seo:XmlSitemap) {

@@ -1,0 +1,5 @@
+#
+# SEO Noindex tag mixin
+#
+'Neos.Seo:NoindexDescendantMixin':
+  abstract: true
