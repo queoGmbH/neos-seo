@@ -241,6 +241,16 @@ that prototype.
 
 There is an extended prototype `Neos.Seo:NoindexDescendantMixin` used to not index for all child nodes (descendants)
 of a node that inherits from it.
+To hide the related inspector property you can add the following yaml mixin configuration for first layer nodes, second+
+layer nodes will have the property in the UI but will ignore the value and are excludes from the xml::
+
+    'Vendor.Package:Mixin.NoindexDescendant':
+        abstract: true
+        properties:
+            metaRobotsNoindex:
+                ui:
+                    inspector:
+                        hidden: 'ClientEval: parentNode.nodeType == "<your nodetype with `Neos.Seo:NoindexDescendantMixin` supertype>"'
 
 To include alternate language links of pages in the xml sitemap use the following fusion code::
 
